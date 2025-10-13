@@ -6,7 +6,6 @@ int main(int ac, char **av)
 	t_pile	*stack_a;
 	t_pile	*stack_b;
 	t_pile	*list_new;
-	// int 	i;
 
 	ps = malloc(sizeof(t_ps));
 	stack_a = NULL;
@@ -35,13 +34,15 @@ int main(int ac, char **av)
 		}
 		ft_print_list(stack_a);
 	
-		// ft_printf("ss\n");
-		// ft_swap_ss(&stack_a, &stack_b);
-		// ft_print_list(stack_a);
-		// printf("\n");
-		// ft_print_list(stack_b);
+		ft_printf("ss\n");
+		ft_swap_ss(&stack_a, &stack_b);
+		ft_print_list(stack_a);
+		printf("\n");
+		ft_print_list(stack_b);
 
 		ft_lst_clear(&stack_a);
+		ft_lst_clear(&stack_b);
+		ft_free(ps->av_splite, ps->arg);
 		free(ps);
 		return (0);
 	}
@@ -122,6 +123,7 @@ int main(int ac, char **av)
 	// }
 	// ft_print_list(stack_a);
 	ft_lst_clear(&stack_a);
+	ft_lst_clear(&stack_b);
 	free(ps);
 	// ft_print_list(stack_a);
 	return (0);

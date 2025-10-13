@@ -26,6 +26,7 @@ typedef struct s_pile
 t_pile	*ft_lstnew(int	content);
 void	ft_lstadd_back(t_pile **lst, t_pile *new);
 void	ft_lst_clear(t_pile **lst);
+void	ft_free(char **resultat, int j);
 
 int		ft_int_check(char *av);
 int		ft_limit_check(char *av);

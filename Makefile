@@ -12,6 +12,7 @@ SRC =	$(SRC_DIR)/push_swap.c \
 		$(SRC_DIR)/ft_list.c \
 		$(SRC_DIR)/ft_check.c \
 		$(SRC_DIR)/ft_print.c \
+		$(SRC_DIR)/ft_free.c \
 		$(SRC_DIR)/ft_swap.c \
 		$(SRC_DIR)/ft_rotate.c \
 		$(SRC_DIR)/ft_renverse_rotate.c \
