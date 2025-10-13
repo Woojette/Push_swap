@@ -2,32 +2,33 @@
 
 void	ft_swap(t_pile **lst)
 {
-	t_pile	*temp_1;
-	t_pile	*temp_2;
-	// t_pile	*temp_1;
-	// t_pile	*temp_2;
+	t_pile	*temp_lst;
+	int		temp_content_1;
+	int		temp_content_2;
 
 	if (!(*lst))
 		return ;
-	temp_1 = (*lst);
-	temp_2 = (*lst);
-	temp_1 = temp_1->next;
-	(*lst)->content = temp_1->content;
-	(*lst) = (*lst)->next;
-	(*lst)->content = temp_2->content;
-	(*lst) = temp_2;
-	// temp_1 = ft_lstnew(temp_lst->content);
-	// if (!(temp_lst->next))
-	// 	return ;
-	// temp_2 = ft_lstnew(temp_lst->content);
+	temp_lst = (*lst);
+	temp_content_1 = temp_lst->content;
+	if (temp_lst->next == NULL)
+		return ;
+	temp_lst = temp_lst->next;
+	temp_content_2 = temp_lst->content;
+	temp_lst->content = temp_content_1;
+	(*lst)->content = temp_content_2;
+}
 
-	// if (!(temp_lst->next))
-	// {
-	// 	ft_lstadd_back(&temp_2, temp_1);
-	// 	(*lst) = temp_2;
-	// 	return ;
-	// }
-	// ft_lstadd_front(&temp_lst, temp_1->content);
-	// ft_lstadd_front(&temp_lst, temp_2->content);
-	// (*lst) = temp_lst;
+void	ft_swap_ss(t_pile **lst_a, t_pile **lst_b)
+{
+	if ((!(lst_a) || !(*lst_a)) && (!(lst_b) || !(*lst_b)))
+		return ;
+	else if ((!(lst_a) || !(*lst_a)) && (*lst_b))
+		ft_swap(lst_b);
+	else if ((*lst_a) && (!(lst_b) || !(*lst_b)))
+		ft_swap(lst_a);
+	else
+	{
+		ft_swap(lst_a);
+		ft_swap(lst_b);
+	}
 }

@@ -34,4 +34,7 @@ int		ft_check_av(char *av, t_pile *lst);
 void	ft_print_list(t_pile *list);
 void	ft_print_deux(t_pile *list_a, t_pile *list_b);
 
+void	ft_swap(t_pile **lst);
+void	ft_swap_ss(t_pile **lst_a, t_pile **lst_b);
+
 #endif
