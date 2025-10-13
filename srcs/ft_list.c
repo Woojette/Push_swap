@@ -9,39 +9,30 @@ t_pile	*ft_lstnew(int	content)
 		return (NULL);
 	lst->content = content;
 	lst->next = NULL;
-	// lst->valeur = 12;
 	return (lst);
 }
 
 void	ft_lstadd_back(t_pile **lst, t_pile *new)
 {
 	t_pile	*temp;
-	// temp = malloc(sizeof(t_list));
-	// if (!temp)
-	// 	return ;
-	temp = *lst;
+
+	if (!lst || !new)
+		return ;
 	if (!(*lst))
 	{
 		(*lst) = new;
 		return ;
 	}
-	while ((*lst)->next != NULL)
-	{
-
-		(*lst) = (*lst)->next;
-		// if (((*lst)->next) == NULL)
-		// {
-		// 	(*lst)->next = new;
-		// 	break;
-		// }
-	}
-	(*lst)->next = new;
-	*lst = temp;
+	temp = *lst;
+	while (temp->next != NULL)
+		temp = temp->next;
+	temp->next = new;
 }
 
 void	ft_lst_clear(t_pile **lst)
 {
 	t_pile	*temp;
+
 	if (!(*lst))
 		return ;
 	while ((*lst))

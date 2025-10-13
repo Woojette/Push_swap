@@ -14,6 +14,7 @@ typedef struct s_ps
 	int		arg2;
 	int		error;
 	int		atoi_av1;
+	char	**av_splite;
 }	t_ps;
 
 typedef struct s_pile
@@ -25,5 +26,12 @@ typedef struct s_pile
 t_pile	*ft_lstnew(int	content);
 void	ft_lstadd_back(t_pile **lst, t_pile *new);
 void	ft_lst_clear(t_pile **lst);
+
+int		ft_int_check(char *av);
+int		ft_limit_check(char *av);
+int		ft_dup_check(char *av, t_pile *lst);
+int		ft_check_av(char *av, t_pile *lst);
+void	ft_print_list(t_pile *list);
+void	ft_print_deux(t_pile *list_a, t_pile *list_b);
 
 #endif
