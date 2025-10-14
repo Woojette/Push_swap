@@ -63,7 +63,6 @@ typedef struct s_list
 	struct s_list	*next;
 }				t_list;
 
-void	ft_lstadd_front(t_list **list, t_list *new);
 int		ft_lstsize(t_list *lst);
 
 #endif

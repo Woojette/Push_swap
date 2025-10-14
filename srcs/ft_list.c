@@ -12,6 +12,14 @@ t_pile	*ft_lstnew(int	content)
 	return (lst);
 }
 
+void	ft_lstadd_front(t_pile **list, t_pile *new)
+{
+	if (!list || !new)
+		return ;
+	new->next = *list;
+	*list = new;
+}
+
 void	ft_lstadd_back(t_pile **lst, t_pile *new)
 {
 	t_pile	*temp;
@@ -28,3 +36,4 @@ void	ft_lstadd_back(t_pile **lst, t_pile *new)
 		temp = temp->next;
 	temp->next = new;
 }
+

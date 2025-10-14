@@ -24,6 +24,7 @@ typedef struct s_pile
 }	t_pile;
 
 t_pile	*ft_lstnew(int	content);
+void	ft_lstadd_front(t_pile **list, t_pile *new);
 void	ft_lstadd_back(t_pile **lst, t_pile *new);
 void	ft_lst_clear(t_pile **lst);
 void	ft_free(char **resultat, int j);
@@ -37,5 +38,11 @@ void	ft_print_deux(t_pile *list_a, t_pile *list_b);
 
 void	ft_swap(t_pile **lst);
 void	ft_swap_ss(t_pile **lst_a, t_pile **lst_b);
+void	ft_rotate(t_pile **lst);
+void	ft_rotate_rr(t_pile **lst_a, t_pile **lst_b);
+void	ft_rv_rotate(t_pile **lst);
+void	ft_rv_rotate_rrr(t_pile **lst_a, t_pile **lst_b);
+void	ft_push_pb(t_pile **lst_a, t_pile **lst_b);
+void	ft_push_pa(t_pile **lst_a, t_pile **lst_b);
 
 #endif

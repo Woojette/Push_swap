@@ -15,7 +15,7 @@ SRC =	$(SRC_DIR)/push_swap.c \
 		$(SRC_DIR)/ft_free.c \
 		$(SRC_DIR)/ft_swap.c \
 		$(SRC_DIR)/ft_rotate.c \
-		$(SRC_DIR)/ft_renverse_rotate.c \
+		$(SRC_DIR)/ft_rv_rotate.c \
 		$(SRC_DIR)/ft_push.c
 
 OBJS        = $(SRC:%.c=$(OBJ_DIR)/%.o)
