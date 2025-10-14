@@ -16,6 +16,18 @@ void	ft_rotate(t_pile **lst)
 	temp_fin->next = temp;
 }
 
+void	ft_rotate_a(t_pile **lst)
+{
+	ft_rotate(lst);
+	ft_printf("ra\n");
+}
+
+void	ft_rotate_b(t_pile **lst)
+{
+	ft_rotate(lst);
+	ft_printf("rb\n");
+}
+
 void	ft_rotate_rr(t_pile **lst_a, t_pile **lst_b)
 {
 	if ((!lst_a || !(*lst_a) || !(*lst_a)->next) && (!lst_b || !(*lst_b) || !(*lst_b)))
@@ -29,4 +41,5 @@ void	ft_rotate_rr(t_pile **lst_a, t_pile **lst_b)
 		ft_rotate(lst_a);
 		ft_rotate(lst_b);
 	}
+	ft_printf("rr\n");
 }

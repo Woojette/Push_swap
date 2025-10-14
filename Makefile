@@ -10,7 +10,8 @@ OBJ_DIR     = objs
 
 SRC =	$(SRC_DIR)/push_swap.c \
 		$(SRC_DIR)/ft_list.c \
-		$(SRC_DIR)/ft_check.c \
+		$(SRC_DIR)/ft_check_av.c \
+		$(SRC_DIR)/ft_check_tri.c \
 		$(SRC_DIR)/ft_print.c \
 		$(SRC_DIR)/ft_free.c \
 		$(SRC_DIR)/ft_swap.c \

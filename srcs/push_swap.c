@@ -53,22 +53,24 @@ int main(int ac, char **av)
 		// ft_print_deux(stack_a, stack_b);
 
 		// 4_1) test_push_pb
-		ft_print_deux(stack_a, stack_b);
-		ft_printf("\npush pb\n");
-		ft_push_pb(&stack_a, &stack_b);
-		ft_print_deux(stack_a, stack_b);
-		ft_printf("\npush pb\n");
-		ft_push_pb(&stack_a, &stack_b);
-		ft_print_deux(stack_a, stack_b);
+		// ft_print_deux(stack_a, stack_b);
+		// ft_printf("\npush pb\n");
+		// ft_push_pb(&stack_a, &stack_b);
+		// ft_print_deux(stack_a, stack_b);
+		// ft_printf("\npush pb\n");
+		// ft_push_pb(&stack_a, &stack_b);
+		// ft_print_deux(stack_a, stack_b);
 
 		// 4_2) test_push_pa
-		ft_printf("\n\n");
-		ft_printf("\npush pa\n");
-		ft_push_pa(&stack_a, &stack_b);
-		ft_print_deux(stack_a, stack_b);
-		ft_printf("\npush pa\n");
-		ft_push_pa(&stack_a, &stack_b);
-		ft_print_deux(stack_a, stack_b);
+		// ft_printf("\n\n");
+		// ft_printf("\npush pa\n");
+		// ft_push_pa(&stack_a, &stack_b);
+		// ft_print_deux(stack_a, stack_b);
+		// ft_printf("\npush pa\n");
+		// ft_push_pa(&stack_a, &stack_b);
+		// ft_print_deux(stack_a, stack_b);
+
+
 
 		ft_lst_clear(&stack_a);
 		ft_lst_clear(&stack_b);
@@ -107,22 +109,27 @@ int main(int ac, char **av)
 	// ft_print_deux(stack_a, stack_b);
 
 	// 4_1) test_push_pb
-	ft_print_deux(stack_a, stack_b);
-	ft_printf("\npush pb\n");
-	ft_push_pb(&stack_a, &stack_b);
-	ft_print_deux(stack_a, stack_b);
-	ft_printf("\npush pb\n");
-	ft_push_pb(&stack_a, &stack_b);
-	ft_print_deux(stack_a, stack_b);
+	// ft_print_deux(stack_a, stack_b);
+	// ft_printf("\npush pb\n");
+	// ft_push_pb(&stack_a, &stack_b);
+	// ft_print_deux(stack_a, stack_b);
+	// ft_printf("\npush pb\n");
+	// ft_push_pb(&stack_a, &stack_b);
+	// ft_print_deux(stack_a, stack_b);
 
 	// 4_2) test_push_pa
-	ft_printf("\n\n");
-	ft_printf("\npush pa\n");
-	ft_push_pa(&stack_a, &stack_b);
-	ft_print_deux(stack_a, stack_b);
-	ft_printf("\npush pa\n");
-	ft_push_pa(&stack_a, &stack_b);
-	ft_print_deux(stack_a, stack_b);
+	// ft_printf("\n\n");
+	// ft_printf("\npush pa\n");
+	// ft_push_pa(&stack_a, &stack_b);
+	// ft_print_deux(stack_a, stack_b);
+	// ft_printf("\npush pa\n");
+	// ft_push_pa(&stack_a, &stack_b);
+	// ft_print_deux(stack_a, stack_b);
+
+	int	i;
+
+	i = ft_check_croissant(stack_a);
+	ft_printf("%d\n", i);
 
 	// if (ac == 2)
 	// {

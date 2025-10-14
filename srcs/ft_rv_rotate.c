@@ -23,6 +23,18 @@ void	ft_rv_rotate(t_pile **lst)
 	ft_lstadd_front(lst, temp_fin);
 }
 
+void	ft_rv_rotate_a(t_pile **lst)
+{
+	ft_rv_rotate(lst);
+	ft_printf("rra\n");
+}
+
+void	ft_rv_rotate_b(t_pile **lst)
+{
+	ft_rv_rotate(lst);
+	ft_printf("rrb\n");
+}
+
 void	ft_rv_rotate_rrr(t_pile **lst_a, t_pile **lst_b)
 {
 	if ((!lst_a || !(*lst_a) || !(*lst_a)->next) && (!lst_b || !(*lst_b) || !(*lst_b)))
@@ -36,4 +48,5 @@ void	ft_rv_rotate_rrr(t_pile **lst_a, t_pile **lst_b)
 		ft_rv_rotate(lst_a);
 		ft_rv_rotate(lst_b);
 	}
+	ft_printf("rrr\n");
 }

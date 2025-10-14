@@ -18,6 +18,19 @@ void	ft_swap(t_pile **lst)
 	(*lst)->content = temp_content_2;
 }
 
+void	ft_swap_a(t_pile **lst)
+{
+	ft_swap(lst);
+	ft_printf("sa\n");
+}
+
+void	ft_swap_b(t_pile **lst)
+{
+	ft_swap(lst);
+	ft_printf("sb\n");
+
+}
+
 void	ft_swap_ss(t_pile **lst_a, t_pile **lst_b)
 {
 	if ((!(lst_a) || !(*lst_a)) && (!(lst_b) || !(*lst_b)))
@@ -31,4 +44,5 @@ void	ft_swap_ss(t_pile **lst_a, t_pile **lst_b)
 		ft_swap(lst_a);
 		ft_swap(lst_b);
 	}
+	ft_printf("ss\n");
 }
