@@ -52,4 +52,6 @@ void	ft_rv_rotate_rrr(t_pile **lst_a, t_pile **lst_b);
 void	ft_push_pb(t_pile **lst_a, t_pile **lst_b);
 void	ft_push_pa(t_pile **lst_a, t_pile **lst_b);
 
+int		ft_if_sorted(t_pile *lst_a, t_pile *lst_b);
+
 #endif

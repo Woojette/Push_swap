@@ -35,6 +35,7 @@ int main(int ac, char **av)
 		// ft_printf("    ");
 		// ft_print_list(stack_a);
 	
+		// I. parsing
 		// 1) test_swap
 		// ft_printf("ss\n");
 		// ft_swap_ss(&stack_a, &stack_b);
@@ -70,6 +71,12 @@ int main(int ac, char **av)
 		// ft_push_pa(&stack_a, &stack_b);
 		// ft_print_deux(stack_a, stack_b);
 
+		// II. Algorithme
+		// int	i;
+
+		// i = ft_if_sorted(stack_a, stack_b);
+		// ft_printf("%d\n", i);
+
 
 
 		ft_lst_clear(&stack_a);
@@ -91,6 +98,7 @@ int main(int ac, char **av)
 	// ft_printf("    ");
 	// ft_print_list(stack_a);
 
+	// I. Parsing
 	// 1) test_swap
 	// ft_printf("ss\n");
 	// ft_swap_ss(&stack_a, &stack_b);
@@ -126,10 +134,13 @@ int main(int ac, char **av)
 	// ft_push_pa(&stack_a, &stack_b);
 	// ft_print_deux(stack_a, stack_b);
 
-	int	i;
+	// II. Algorithme
+	// int	i;
 
-	i = ft_check_croissant(stack_a);
-	ft_printf("%d\n", i);
+	// i = ft_if_sorted(stack_a, stack_b);
+	// ft_printf("%d\n", i);
+
+
 
 	// if (ac == 2)
 	// {
