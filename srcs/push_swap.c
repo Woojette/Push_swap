@@ -32,6 +32,8 @@ int main(int ac, char **av)
 			ft_lstadd_back(&stack_a, list_new);
 			ps->arg++;
 		}
+		if (ft_if_sorted(stack_a, stack_b))
+			return (ft_printf("\n"), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
 		// ft_printf("    ");
 		// ft_print_list(stack_a);
 	
@@ -95,6 +97,8 @@ int main(int ac, char **av)
 		ft_lstadd_back(&stack_a, list_new);
 		ps->arg++;
 	}
+	if (ft_if_sorted(stack_a, stack_b))
+		return (ft_printf("\n"), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
 	// ft_printf("    ");
 	// ft_print_list(stack_a);
 

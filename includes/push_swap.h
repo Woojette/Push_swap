@@ -28,12 +28,13 @@ void	ft_lstadd_front(t_pile **list, t_pile *new);
 void	ft_lstadd_back(t_pile **lst, t_pile *new);
 void	ft_lst_clear(t_pile **lst);
 void	ft_free(char **resultat, int j);
+void	ft_free_list(t_pile **lst_a, t_pile **lst_b, t_ps **ps, int ac);
 
 int		ft_int_check(char *av);
 int		ft_limit_check(char *av);
 int		ft_dup_check(char *av, t_pile *lst);
 int		ft_check_av(char *av, t_pile *lst);
-int	ft_check_croissant(t_pile *lst);
+int		ft_check_croissant(t_pile *lst);
 void	ft_print_list(t_pile *list);
 void	ft_print_deux(t_pile *list_a, t_pile *list_b);
 
