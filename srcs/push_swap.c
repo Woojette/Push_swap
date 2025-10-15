@@ -81,10 +81,7 @@ int main(int ac, char **av)
 
 
 
-		ft_lst_clear(&stack_a);
-		ft_lst_clear(&stack_b);
-		ft_free(ps->av_splite, ps->arg);
-		free(ps);
+		ft_free_list(&stack_a, &stack_b, &ps, ac);
 		return (0);
 	}
 
@@ -201,9 +198,7 @@ int main(int ac, char **av)
 	// 	repete++;
 	// }
 	// ft_print_list(stack_a);
-	ft_lst_clear(&stack_a);
-	ft_lst_clear(&stack_b);
-	free(ps);
+	ft_free_list(&stack_a, &stack_b, &ps, ac);
 	// ft_print_list(stack_a);
 	return (0);
 }
