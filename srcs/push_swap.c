@@ -34,7 +34,12 @@ int main(int ac, char **av)
 		}
 		if (ft_if_sorted(stack_a, stack_b))
 			return (ft_printf("\n"), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
-		// ft_printf("    ");
+		if (ft_compter_val_a(stack_a, stack_b) <= 3)
+			return (ft_check_val_a_123(&stack_a), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
+		if (ft_compter_val_a(stack_a, stack_b) == 4)
+			return (ft_check_val_4(&stack_a, &stack_b), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
+
+			// ft_printf("    ");
 		// ft_print_list(stack_a);
 	
 		// I. parsing
@@ -94,8 +99,18 @@ int main(int ac, char **av)
 		ft_lstadd_back(&stack_a, list_new);
 		ps->arg++;
 	}
+
+	// int	n;
+
+	// n = ft_compter_val_a(stack_a, stack_b);
+	// printf("nombre de liste : %d\n", n);
+
 	if (ft_if_sorted(stack_a, stack_b))
 		return (ft_printf("\n"), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
+	if (ft_compter_val_a(stack_a, stack_b) <= 3)
+		return (ft_check_val_a_123(&stack_a), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
+	if (ft_compter_val_a(stack_a, stack_b) == 4)
+		return (ft_check_val_4(&stack_a, &stack_b), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
 	// ft_printf("    ");
 	// ft_print_list(stack_a);
 

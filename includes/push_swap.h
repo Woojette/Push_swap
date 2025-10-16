@@ -54,5 +54,14 @@ void	ft_push_pb(t_pile **lst_a, t_pile **lst_b);
 void	ft_push_pa(t_pile **lst_a, t_pile **lst_b);
 
 int		ft_if_sorted(t_pile *lst_a, t_pile *lst_b);
+int		ft_compter_val(t_pile *lst);
+int		ft_compter_val_a(t_pile *lst_a, t_pile *lst_b);
+void	ft_check_val_a_123(t_pile **lst);
+void	ft_check_val_a_2(t_pile **lst);
+void	ft_check_val_a_3(t_pile **lst);
+void	ft_tri_a_3(int n1, int n2, int n3, t_pile **lst);
+void	ft_check_val_4(t_pile **lst_a, t_pile **lst_b);
+int		ft_check_min(t_pile *lst);
+void	ft_min_push(t_pile **lst_a, t_pile **lst_b, int min);
 
 #endif

@@ -35,3 +35,33 @@ int	ft_if_sorted(t_pile *lst_a, t_pile *lst_b)
 	}
 	return (0);
 }
+
+int	ft_compter_val(t_pile *lst)
+{
+	int	i;
+
+	i = 0;
+	if (!lst)
+		return (0);
+	while (lst)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
+}
+
+int	ft_compter_val_a(t_pile *lst_a, t_pile *lst_b)
+{
+	int	i;
+
+	i = 0;
+	if (!lst_a || lst_b)
+		return (0);
+	while (lst_a)
+	{
+		lst_a = lst_a->next;
+		i++;
+	}
+	return (i);
+}
