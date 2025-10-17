@@ -18,6 +18,27 @@ int	ft_check_min(t_pile *lst)
 	return (min);
 }
 
+int	ft_check_2134(t_pile *lst)
+{
+	int		n1;
+	int		n2;
+	int		n3;
+	int		n4;
+
+	if (!lst)
+		return (0);
+	n1 = lst->content;
+	lst = lst->next;
+	n2 = lst->content;
+	lst = lst->next;
+	n3 = lst->content;
+	lst = lst->next;
+	n4 = lst->content;
+	if (n1 > n2  &&  n1 < n3  &&  n1 < n4  &&  n3 < n4)
+		return (1);
+	return (0);
+}
+
 void	ft_min_push(t_pile **lst_a, t_pile **lst_b, int min)
 {
 	t_pile *temp_lst;
@@ -54,6 +75,11 @@ void	ft_check_val_4(t_pile **lst_a, t_pile **lst_b)
 	if (!lst_a || !(*lst_a) || (*lst_b))
 		return ;
 	temp_lst = (*lst_a);
+	if (ft_check_2134(temp_lst))
+	{
+		ft_swap_a(lst_a);
+		return ;
+	}
 	min = ft_check_min(temp_lst);
 	ft_min_push(lst_a, lst_b, min);
 	if (ft_compter_val((*lst_a)) == 3)
