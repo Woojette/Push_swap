@@ -73,22 +73,16 @@ void	ft_check_val_5(t_pile **lst_a, t_pile **lst_b)
 	}
 	min1 = ft_check_min(temp_lst);
 	ft_min_push(lst_a, lst_b, min1);
-	ft_print_deux((*lst_a), (*lst_b));
-	ft_printf("min1%d\n", min1);
-	if (ft_check_val_4_pb_0(temp_lst))
-	{
-		ft_printf("min4\n%d\n", 21);
-		ft_check_val_4(lst_a, lst_b);
-		ft_printf("min3\n%d\n", 21);
 
+	if (ft_check_val_4_pb_0((*lst_a)))
+	{
+		ft_check_val_4(lst_a, lst_b);
 		ft_push_pa(lst_a, lst_b);
 		return ;
 	}
-	ft_printf("min2\n%d\n", 21);
 	min2 = ft_check_min((*lst_a));
-	ft_printf("\n%d\n", min2);
 	ft_min_push(lst_a, lst_b, min2);
-	if (ft_compter_val(temp_lst) == 3)
+	if (ft_compter_val((*lst_a)) == 3)
 		ft_check_val_a_123(lst_a);
 	ft_push_pa(lst_a, lst_b);
 	ft_push_pa(lst_a, lst_b);
