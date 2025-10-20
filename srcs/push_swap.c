@@ -38,9 +38,11 @@ int main(int ac, char **av)
 			return (ft_check_val_a_123(&stack_a), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
 		if (ft_compter_val_a(stack_a, stack_b) == 4)
 			return (ft_check_val_4(&stack_a, &stack_b), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
+		if (ft_compter_val_a(stack_a, stack_b) == 5)
+			return (ft_check_val_5(&stack_a, &stack_b), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
 
 			// ft_printf("    ");
-		// ft_print_list(stack_a);
+		ft_print_list(stack_a);
 	
 		// I. parsing
 		// 1) test_swap
@@ -111,6 +113,12 @@ int main(int ac, char **av)
 		return (ft_check_val_a_123(&stack_a), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
 	if (ft_compter_val_a(stack_a, stack_b) == 4)
 		return (ft_check_val_4(&stack_a, &stack_b), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
+	if (ft_compter_val_a(stack_a, stack_b) == 5)
+	{
+		// ft_print_list(stack_a);
+		return (ft_check_val_5(&stack_a, &stack_b), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
+	}
+		
 	// ft_printf("    ");
 	// ft_print_list(stack_a);
 

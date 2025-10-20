@@ -62,7 +62,11 @@ void	ft_check_val_a_3(t_pile **lst);
 void	ft_tri_a_3(int n1, int n2, int n3, t_pile **lst);
 void	ft_check_val_4(t_pile **lst_a, t_pile **lst_b);
 int		ft_check_min(t_pile *lst);
-int 	ft_check_2134(t_pile *lst);
+int		ft_check_val_4_pb_0(t_pile *lst);
+void	ft_val_4_pb_0(t_pile **lst_a);
 void	ft_min_push(t_pile **lst_a, t_pile **lst_b, int min);
+void	ft_check_val_5(t_pile **lst_a, t_pile **lst_b);
+int		ft_check_pb_0(t_pile *lst);
+void	ft_val_5_pb_0(t_pile **lst_a);
 
 #endif
