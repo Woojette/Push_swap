@@ -26,6 +26,7 @@ typedef struct s_pile
 t_pile	*ft_lstnew(int	content);
 void	ft_lstadd_front(t_pile **list, t_pile *new);
 void	ft_lstadd_back(t_pile **lst, t_pile *new);
+t_pile	*ft_lstmap(t_pile *lst, void *(*f)(void *), void (*del)(void *));
 void	ft_lst_clear(t_pile **lst);
 void	ft_free(char **resultat, int j);
 void	ft_free_list(t_pile **lst_a, t_pile **lst_b, t_ps **ps, int ac);
@@ -64,9 +65,10 @@ void	ft_check_val_4(t_pile **lst_a, t_pile **lst_b);
 int		ft_check_min(t_pile *lst);
 int		ft_check_val_4_pb_0(t_pile *lst);
 void	ft_val_4_pb_0(t_pile **lst_a);
-void	ft_min_push(t_pile **lst_a, t_pile **lst_b, int min);
+void	ft_min_push_4(t_pile **lst_a, t_pile **lst_b, int min);
 void	ft_check_val_5(t_pile **lst_a, t_pile **lst_b);
 int		ft_check_pb_0(t_pile *lst);
 void	ft_val_5_pb_0(t_pile **lst_a);
+void	ft_min_push_5(t_pile **lst_a, t_pile **lst_b, int min);
 
 #endif

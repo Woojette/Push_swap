@@ -34,11 +34,12 @@ int	ft_check_val_4_pb_0(t_pile *lst)
 	n3 = lst->content;
 	lst = lst->next;
 	n4 = lst->content;
-	if (n1 > n2  &&  n1 < n3  &&  n3 < n4)
+	// ft_printf("n : %d %d %d %d\n", n1, n2, n3, n4);
+	if (n1 > n2  &&  n1 < n3  &&  n3 < n4) // 2134
 		return (1);
-	if (n1 < n2  &&  n2 < n3  &&  n1 > n4)
+	if (n1 < n2  &&  n2 < n3  &&  n1 > n4) // 2341
 		return (1);
-	if (n2 < n3  &&  n3 < n4  &&  n4 < n1)
+	if (n2 < n3  &&  n3 < n4  &&  n4 < n1) // 4123
 		return (1);
 	return (0);
 }
@@ -69,7 +70,7 @@ void	ft_val_4_pb_0(t_pile **lst_a)
 		ft_rotate_a(lst_a);
 }
 
-void	ft_min_push(t_pile **lst_a, t_pile **lst_b, int min)
+void	ft_min_push_4(t_pile **lst_a, t_pile **lst_b, int min)
 {
 	t_pile *temp_lst;
 	int		ordre;
@@ -102,7 +103,7 @@ void	ft_check_val_4(t_pile **lst_a, t_pile **lst_b)
 	t_pile	*temp_lst;
 	int		min;
 
-	if (!lst_a || !(*lst_a) || (*lst_b))
+	if (!lst_a || !(*lst_a))
 		return ;
 	temp_lst = (*lst_a);
 	if (ft_check_val_4_pb_0(temp_lst))
@@ -111,7 +112,7 @@ void	ft_check_val_4(t_pile **lst_a, t_pile **lst_b)
 		return ;
 	}
 	min = ft_check_min(temp_lst);
-	ft_min_push(lst_a, lst_b, min);
+	ft_min_push_4(lst_a, lst_b, min);
 	if (ft_compter_val((*lst_a)) == 3)
 		ft_check_val_a_123(lst_a);
 	ft_push_pa(lst_a, lst_b);
