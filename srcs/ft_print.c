@@ -1,12 +1,13 @@
 #include "push_swap.h"
 
-void	ft_print_list(t_pile *list)
+void	ft_print_list(t_pile *lst)
 {
-	while (list)
+	while (lst)
 	{
-		ft_printf("%d | ", list->content);
-		list = list->next;
+		ft_printf("[%d] %d | ", lst->index, lst->content);
+		lst = lst->next;
 	}
+	ft_printf("\n");
 }
 
 void	ft_print_deux(t_pile *list_a, t_pile *list_b)

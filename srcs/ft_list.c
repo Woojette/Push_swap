@@ -37,7 +37,7 @@ void	ft_lstadd_back(t_pile **lst, t_pile *new)
 	temp->next = new;
 }
 
-t_pile	*ft_lstmap(t_pile *lst, int (*f)(int), void (*del)(void *))
+t_pile	*ft_lstmap(t_pile *lst, int (*f)(t_pile *lst), void (*del)(void *))
 {
 	t_pile 	*lst_new;
 	t_pile	*lst_ajoute;
@@ -48,15 +48,12 @@ t_pile	*ft_lstmap(t_pile *lst, int (*f)(int), void (*del)(void *))
 	lst_new = NULL;
 	while (lst)
 	{
-		content_new = f(lst->content);
+		content_new = f(lst);
 		if (!content_new)
 			return (ft_lst_clear(&lst_new), NULL);
 		lst_ajoute = ft_lstnew(content_new);
 		if (!lst_ajoute)
-		{
-			del(content_new);
 			return (ft_lst_clear(&lst_new), NULL);
-		}
 		ft_lstadd_back(&lst_new, lst_ajoute);
 		lst = lst->next;
 	}

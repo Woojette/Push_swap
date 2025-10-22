@@ -1,23 +1,5 @@
 #include "push_swap.h"
 
-int	ft_check_min(t_pile *lst)
-{
-	int	min;
-	int	cmp;
-
-	if (!lst)
-		return (0);
-	min = lst->content;
-	while (lst->next)
-	{
-		lst = lst->next;
-		cmp = lst->content;
-		if (min > cmp)
-			min = cmp;
-	}
-	return (min);
-}
-
 int	ft_check_val_4_pb_0(t_pile *lst)
 {
 	int		n1;

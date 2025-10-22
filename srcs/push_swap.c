@@ -39,7 +39,12 @@ int main(int ac, char **av)
 			return (ft_check_val_a_123(&stack_a), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
 		if (ft_compter_val_a(stack_a, stack_b) == 4)
 			return (ft_check_val_4(&stack_a, &stack_b), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
-
+		copie_a = ft_lstmap(stack_a, ft_list_contenu_copie, free);
+		ft_bubble_sort(&copie_a);
+		ft_index(&copie_a);
+		ft_print_list(copie_a);
+		ft_index_copie(&stack_a, &copie_a);
+		ft_print_list(stack_a);
 
 		// if (ft_compter_val_a(stack_a, stack_b) == 5)
 		// 	return (ft_check_val_5(&stack_a, &stack_b), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
@@ -90,7 +95,7 @@ int main(int ac, char **av)
 		// ft_printf("%d\n", i);
 
 
-
+		ft_lst_clear(&copie_a);
 		ft_free_list(&stack_a, &stack_b, &ps, ac);
 		return (0);
 	}
@@ -116,8 +121,12 @@ int main(int ac, char **av)
 		return (ft_check_val_a_123(&stack_a), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
 	if (ft_compter_val_a(stack_a, stack_b) == 4)
 		return (ft_check_val_4(&stack_a, &stack_b), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
-	// copie_a = ft_lstmap(stack_a, , free);
-
+	copie_a = ft_lstmap(stack_a, ft_list_contenu_copie, free);
+	ft_bubble_sort(&copie_a);
+	ft_index(&copie_a);
+	ft_print_list(copie_a);
+	ft_index_copie(&stack_a, &copie_a);
+	ft_print_list(stack_a);
 
 	// if (ft_compter_val_a(stack_a, stack_b) == 5)
 	// {
@@ -227,6 +236,7 @@ int main(int ac, char **av)
 	// 	repete++;
 	// }
 	// ft_print_list(stack_a);
+	ft_lst_clear(&copie_a);
 	ft_free_list(&stack_a, &stack_b, &ps, ac);
 	// ft_print_list(stack_a);
 	return (0);

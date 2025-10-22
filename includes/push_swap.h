@@ -20,13 +20,14 @@ typedef struct s_ps
 typedef struct s_pile
 {
 	int		content;
+	int		index;
 	struct s_pile	*next;
 }	t_pile;
 
 t_pile	*ft_lstnew(int	content);
 void	ft_lstadd_front(t_pile **list, t_pile *new);
 void	ft_lstadd_back(t_pile **lst, t_pile *new);
-t_pile	*ft_lstmap(t_pile *lst, void *(*f)(void *), void (*del)(void *));
+t_pile	*ft_lstmap(t_pile *lst, int (*f)(t_pile *lst), void (*del)(void *));
 void	ft_lst_clear(t_pile **lst);
 void	ft_free(char **resultat, int j);
 void	ft_free_list(t_pile **lst_a, t_pile **lst_b, t_ps **ps, int ac);
@@ -36,7 +37,8 @@ int		ft_limit_check(char *av);
 int		ft_dup_check(char *av, t_pile *lst);
 int		ft_check_av(char *av, t_pile *lst);
 int		ft_check_croissant(t_pile *lst);
-void	ft_print_list(t_pile *list);
+
+void	ft_print_list(t_pile *lst);
 void	ft_print_deux(t_pile *list_a, t_pile *list_b);
 
 void	ft_swap(t_pile **lst);
@@ -63,6 +65,7 @@ void	ft_check_val_a_3(t_pile **lst);
 void	ft_tri_a_3(int n1, int n2, int n3, t_pile **lst);
 void	ft_check_val_4(t_pile **lst_a, t_pile **lst_b);
 int		ft_check_min(t_pile *lst);
+int		ft_check_max(t_pile *lst);
 int		ft_check_val_4_pb_0(t_pile *lst);
 void	ft_val_4_pb_0(t_pile **lst_a);
 void	ft_min_push_4(t_pile **lst_a, t_pile **lst_b, int min);
@@ -70,5 +73,11 @@ void	ft_check_val_5(t_pile **lst_a, t_pile **lst_b);
 int		ft_check_pb_0(t_pile *lst);
 void	ft_val_5_pb_0(t_pile **lst_a);
 void	ft_min_push_5(t_pile **lst_a, t_pile **lst_b, int min);
+
+int		ft_list_contenu_copie(t_pile *lst);
+void	ft_bubble_sort(t_pile **lst);
+void	ft_swap_int(int *n1, int *n2);
+void	ft_index(t_pile **lst);
+void	ft_index_copie(t_pile **lst, t_pile **copie);
 
 #endif

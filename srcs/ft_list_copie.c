@@ -1,0 +1,44 @@
+#include "push_swap.h"
+
+int	ft_list_contenu_copie(t_pile *lst)
+{
+  if (!lst)
+    return (0);
+	return (lst->content);
+}
+
+void	ft_swap_int(int *n1, int *n2)
+{
+	int	temp;
+
+	temp = *n1;
+	*n1 = *n2;
+	*n2 = temp;
+}
+
+void	ft_bubble_sort(t_pile **lst)
+{
+	t_pile	*temp_lst;
+	int		swap;
+	int		swap_total;
+
+	if (!lst || !(*lst))
+		return ;
+	swap = 1;
+	swap_total = swap;
+	while (swap_total)
+	{
+		temp_lst = (*lst);
+		while (temp_lst->next)
+		{
+			if ((temp_lst->content) > (temp_lst->next->content))
+			{
+				ft_swap_int(&(temp_lst->content), &(temp_lst->next->content));
+				swap++;
+			}
+			temp_lst = temp_lst->next;
+		}
+		swap_total = swap;
+		swap = 0;
+	}
+}
