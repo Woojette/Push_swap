@@ -32,6 +32,6 @@ int	ft_check_max(t_pile *lst)
 	{
 		temp_lst = temp_lst->next;
 	}
-	max = temp_lst->next;
+	max = temp_lst->index;
 	return (max);
 }
