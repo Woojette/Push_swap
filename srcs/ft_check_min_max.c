@@ -18,20 +18,27 @@ int	ft_check_min(t_pile *lst)
 	return (min);
 }
 
-int	ft_check_max(t_pile *lst)
+int	ft_check_max_index(t_pile *lst)
 {
-	t_pile	*temp_lst;
+	int		n1;
 	int		max;
+	int		temp;
 
 	if (!lst)
 		return (0);
-	temp_lst = lst;
-	max = 0;
-	ft_bubble_sort(&lst);
-	while (temp_lst->next)
+	max = lst->next->index;
+	while (lst->next)
 	{
-		temp_lst = temp_lst->next;
+		n1 = lst->index;
+		// ft_printf("n1 : %d, max : %d\n", n1, max);
+		if (n1 > max)
+		{
+			// ft_printf("CHnge n1 : %d, max : %d\n", n1, max);
+			temp = n1;
+			n1 = max;
+			max = temp;
+		}
+		lst = lst->next;
 	}
-	max = temp_lst->index;
 	return (max);
 }

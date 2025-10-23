@@ -19,7 +19,7 @@
 # include <stdlib.h>
 # include <ctype.h>
 # include <strings.h>
-# include <bsd/string.h>
+// # include <bsd/string.h>
 # include <limits.h>
 
 size_t	ft_strlen(const char *str);

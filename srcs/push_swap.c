@@ -122,13 +122,27 @@ int main(int ac, char **av)
 		return (ft_check_val_a_123(&stack_a), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
 	if (ft_compter_val_a(stack_a, stack_b) == 4)
 		return (ft_check_val_4(&stack_a, &stack_b), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
+	// ft_print_list(stack_a);
 	copie_a = ft_lstmap(stack_a, ft_list_contenu_copie, free);
+	// ft_printf("copie avant tri : \n");
+	// ft_print_list(copie_a);
 	ft_bubble_sort(&copie_a);
+	// ft_printf("copie apres tri : \n");
+	// ft_print_list(copie_a);
 	ft_index(&copie_a);
+	// ft_printf("copie apres indexation : \n");
+	// ft_print_list(copie_a);
 	ft_index_copie(&stack_a, &copie_a);
+	// ft_printf("stack_a apres indexation : \n");
 	// ft_print_list(stack_a);
 	ft_radix(&stack_a, &stack_b);
+	ft_printf("resultat final : \n");
 	ft_print_deux_tout(stack_a, stack_b);
+
+	// int	n;
+
+	// n = ft_check_max(stack_a);
+	// ft_printf("max : %d\n", n);
 
 	// if (ft_compter_val_a(stack_a, stack_b) == 5)
 	// {

@@ -43,6 +43,14 @@ void	ft_bubble_sort(t_pile **lst)
 	}
 }
 
+void	ft_bubble_sort_index(t_pile **lst)
+{
+	if (!lst || !(*lst))
+		return ;
+	ft_bubble_sort(lst);
+	ft_index(lst);
+}
+
 void	ft_swap_valeurs(t_pile *lst_a, t_pile *lst_b)
 {
 	int	temp_content_a;

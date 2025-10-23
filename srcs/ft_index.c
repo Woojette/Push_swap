@@ -41,3 +41,4 @@ void	ft_index_copie(t_pile **lst, t_pile **copie)
 		temp_lst = temp_lst->next;
 	}
 }
+

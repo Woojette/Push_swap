@@ -17,9 +17,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	size_t	compteur;
 
-	compteur = 0;
 	i = 0;
 	j = 0;
 	if (!little[i])
@@ -36,7 +34,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		}
 		i++;
 		j = 0;
-		compteur = 0;
 	}
 	return (NULL);
 }
