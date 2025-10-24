@@ -22,21 +22,19 @@ int	ft_check_max_index(t_pile *lst)
 {
 	int		n1;
 	int		max;
-	int		temp;
 
 	if (!lst)
 		return (0);
+	// ft_print_list(lst);
 	max = lst->next->index;
-	while (lst->next)
+	while (lst)
 	{
 		n1 = lst->index;
 		// ft_printf("n1 : %d, max : %d\n", n1, max);
 		if (n1 > max)
 		{
 			// ft_printf("CHnge n1 : %d, max : %d\n", n1, max);
-			temp = n1;
-			n1 = max;
-			max = temp;
+			max = n1;
 		}
 		lst = lst->next;
 	}

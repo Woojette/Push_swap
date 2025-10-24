@@ -86,5 +86,6 @@ void	ft_radix(t_pile **lst_a, t_pile **lst_b);
 int		ft_check_max_index(t_pile *lst);
 int		ft_compter_bits_max(t_pile *lst);
 void	ft_swap_valeurs(t_pile *lst_a, t_pile *lst_b);
+int		ft_check_ordre_inverse(t_pile *lst, int suffix);
 
 #endif

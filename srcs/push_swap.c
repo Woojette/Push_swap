@@ -135,9 +135,20 @@ int main(int ac, char **av)
 	ft_index_copie(&stack_a, &copie_a);
 	// ft_printf("stack_a apres indexation : \n");
 	// ft_print_list(stack_a);
+
+	// int	ordre_avant;
+
+	// ordre_avant = ft_check_ordre_inverse(stack_a, ft_check_max_index(stack_a));
+	// printf("ordre_avant = %d\n", ordre_avant);
+
 	ft_radix(&stack_a, &stack_b);
 	ft_printf("resultat final : \n");
 	ft_print_deux_tout(stack_a, stack_b);
+
+	// int	ordre;
+
+	// ordre = ft_check_ordre_inverse(stack_a, ft_check_max_index(stack_a));
+	// printf("ordre = %d\n", ordre);
 
 	// int	n;
 
