@@ -29,7 +29,11 @@ int	ft_check_ordre_inverse(t_pile *lst, int suffix)
 	if (!lst)
 		return (0);
 	temp_lst = lst;
-	n1 = temp_lst->index;
+	n1 = 0;
+	while (temp_lst->next)
+		temp_lst = temp_lst->next;
+	if ((temp_lst->index) != suffix)
+		return (0);
 	repeter = suffix - 1;
 	while (suffix > 0)
 	{
@@ -133,6 +137,8 @@ void	ft_radix(t_pile **lst_a, t_pile **lst_b)
 			// test_inverse = ft_check_ordre_inverse((*lst_a), suffix);
 			// ft_printf("ordre A : %d\n", test_inverse);
 			// 	// break ;
+			// if (ft_check_ordre_inverse((*lst_a), suffix))
+			// 	break ;
 		}
 		while ((*lst_b))
 			ft_push_pa(lst_a, lst_b);
