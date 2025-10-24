@@ -130,9 +130,9 @@ void	ft_radix(t_pile **lst_a, t_pile **lst_b)
 			}
 			repeter++;
 			ft_printf("---- fin repeter %d ----\n", repeter);
-			test_inverse = ft_check_ordre_inverse((*lst_a), suffix);
-			ft_printf("ordre A : %d\n", test_inverse);
-				// break ;
+			// test_inverse = ft_check_ordre_inverse((*lst_a), suffix);
+			// ft_printf("ordre A : %d\n", test_inverse);
+			// 	// break ;
 		}
 		while ((*lst_b))
 			ft_push_pa(lst_a, lst_b);
