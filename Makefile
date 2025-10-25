@@ -14,7 +14,6 @@ SRC =	$(SRC_DIR)/push_swap.c \
 		$(SRC_DIR)/ft_check_tri.c \
 		$(SRC_DIR)/ft_check_val_a123.c \
 		$(SRC_DIR)/ft_check_val_4.c \
-		$(SRC_DIR)/ft_check_val_5.c \
 		$(SRC_DIR)/ft_check_min_max.c \
 		$(SRC_DIR)/ft_check_radix.c \
 		$(SRC_DIR)/ft_list_copie.c \

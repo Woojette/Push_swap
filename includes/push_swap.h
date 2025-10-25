@@ -70,10 +70,6 @@ int		ft_check_min(t_pile *lst);
 int		ft_check_val_4_pb_0(t_pile *lst);
 void	ft_val_4_pb_0(t_pile **lst_a);
 void	ft_min_push_4(t_pile **lst_a, t_pile **lst_b, int min);
-void	ft_check_val_5(t_pile **lst_a, t_pile **lst_b);
-int		ft_check_pb_0(t_pile *lst);
-void	ft_val_5_pb_0(t_pile **lst_a);
-void	ft_min_push_5(t_pile **lst_a, t_pile **lst_b, int min);
 
 int		ft_list_contenu_copie(t_pile *lst);
 void	ft_bubble_sort(t_pile **lst);
@@ -86,6 +82,6 @@ void	ft_radix(t_pile **lst_a, t_pile **lst_b);
 int		ft_check_max_index(t_pile *lst);
 int		ft_compter_bits_max(t_pile *lst);
 void	ft_swap_valeurs(t_pile *lst_a, t_pile *lst_b);
-int		ft_check_ordre_inverse(t_pile *lst, int suffix);
+void	ft_check_position_bits(t_pile **lst_a, t_pile **lst_b, int position_bits);
 
 #endif
