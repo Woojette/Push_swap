@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_list.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wooyang <wooyang@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/25 21:21:08 by wooyang           #+#    #+#             */
+/*   Updated: 2025/10/25 21:21:12 by wooyang          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
-t_pile	*ft_lstnew(int	content)
+t_pile	*ft_lstnew(int content)
 {
 	t_pile	*lst;
 
@@ -39,7 +51,7 @@ void	ft_lstadd_back(t_pile **lst, t_pile *new)
 
 t_pile	*ft_lstmap(t_pile *lst, int (*f)(t_pile *lst), void (*del)(void *))
 {
-	t_pile 	*lst_new;
+	t_pile	*lst_new;
 	t_pile	*lst_ajoute;
 	int		content_new;
 

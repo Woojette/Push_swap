@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_free.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: wooyang <wooyang@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/25 21:21:08 by wooyang           #+#    #+#             */
+/*   Updated: 2025/10/25 21:21:12 by wooyang          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	ft_free(char **resultat, int j)
@@ -9,10 +21,11 @@ void	ft_free(char **resultat, int j)
 	}
 	free(resultat);
 }
+
 void	ft_free_pl(char **resultat)
 {
 	int	len;
-	int i;
+	int	i;
 
 	i = 0;
 	len = ft_tablen(resultat);
