@@ -45,14 +45,14 @@ int main(int ac, char **av)
 		ft_index_copie(&stack_a, &copie_a);
 		// ft_print_list(stack_a);
 		ft_radix(&stack_a, &stack_b);
-		ft_print_deux_tout(stack_a, stack_b);
+		// ft_print_deux_tout(stack_a, stack_b);
 
 		// if (ft_compter_val_a(stack_a, stack_b) == 5)
 		// 	return (ft_check_val_5(&stack_a, &stack_b), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
 
 			// ft_printf("    ");
 		// ft_print_list(stack_a);
-	
+
 		// I. parsing
 		// 1) test_swap
 		// ft_printf("ss\n");
@@ -94,7 +94,6 @@ int main(int ac, char **av)
 
 		// i = ft_if_sorted(stack_a, stack_b);
 		// ft_printf("%d\n", i);
-
 
 		ft_lst_clear(&copie_a);
 		ft_free_list(&stack_a, &stack_b, &ps, ac);
@@ -142,8 +141,8 @@ int main(int ac, char **av)
 	// printf("ordre_avant = %d\n", ordre_avant);
 
 	ft_radix(&stack_a, &stack_b);
-	ft_printf("resultat final : \n");
-	ft_print_deux_tout(stack_a, stack_b);
+	// ft_printf("resultat final : \n");
+	// ft_print_deux_tout(stack_a, stack_b);
 
 	// int	ordre;
 
