@@ -14,12 +14,11 @@ int main(int ac, char **av)
 	stack_a = NULL;
 	stack_b = NULL;
 	list_new = NULL;
-	
+	copie_a = NULL;
 	if (!ps)
 		return (1);
 	ps->error = 0;
 	ps->arg = 1;
-
 	if (ac == 2)
 	{
 		ps->arg = 0;
@@ -32,24 +31,10 @@ int main(int ac, char **av)
 			ft_lstadd_back(&stack_a, list_new);
 			ps->arg++;
 		}
-		if (ft_if_sorted(stack_a, stack_b))
-			return (ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
-		if (ft_compter_val_a(stack_a, stack_b) <= 3)
-			return (ft_check_val_a_123(&stack_a), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
-		if (ft_compter_val_a(stack_a, stack_b) == 4)
-			return (ft_check_val_4(&stack_a, &stack_b), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
-		copie_a = ft_lstmap(stack_a, ft_list_contenu_copie, free);
-
-		ft_bubble_sort(&copie_a);
-		ft_index(&copie_a);
-		ft_index_copie(&stack_a, &copie_a);
-		ft_radix(&stack_a, &stack_b);
-
-		ft_lst_clear(&copie_a);
-		ft_free_list(&stack_a, &stack_b, &ps, ac);
-		return (0);
+		ft_check_sorted_1234(&stack_a, &stack_b, &ps, ac);
+		ft_index_radix(&stack_a, &stack_b, &copie_a);
+		return (ft_lst_clear(&copie_a), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
 	}
-	// Gerer le cas argc > 2
 	while (ps->arg < ac)
 	{
 		if (ft_check_av(av[ps->arg], stack_a) == 1)
@@ -58,20 +43,7 @@ int main(int ac, char **av)
 		ft_lstadd_back(&stack_a, list_new);
 		ps->arg++;
 	}
-	if (ft_if_sorted(stack_a, stack_b))
-		return (ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
-	if (ft_compter_val_a(stack_a, stack_b) <= 3)
-		return (ft_check_val_a_123(&stack_a), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
-	if (ft_compter_val_a(stack_a, stack_b) == 4)
-		return (ft_check_val_4(&stack_a, &stack_b), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
-	copie_a = ft_lstmap(stack_a, ft_list_contenu_copie, free);
-
-	ft_bubble_sort(&copie_a);
-	ft_index(&copie_a);
-	ft_index_copie(&stack_a, &copie_a);
-	ft_radix(&stack_a, &stack_b);
-
-	ft_lst_clear(&copie_a);
-	ft_free_list(&stack_a, &stack_b, &ps, ac);
-	return (0);
+	ft_check_sorted_1234(&stack_a, &stack_b, &ps, ac);
+	ft_index_radix(&stack_a, &stack_b, &copie_a);
+	return (ft_lst_clear(&copie_a), ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
 }
