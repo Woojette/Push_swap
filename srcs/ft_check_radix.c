@@ -243,10 +243,6 @@ void	ft_radix(t_pile **lst_a, t_pile **lst_b)
 		{
 			if (!(*lst_a))
 				break ;
-			// if ((((*lst_a)->index) >> position_bits) & 1)
-			// 	ft_rotate_a(&(*lst_a));
-			// else if (((((*lst_a)->index) >> position_bits) & 1) == 0)
-			// 	ft_push_pb(lst_a, lst_b);
 			ft_check_position_bits(lst_a, lst_b, position_bits);
 			repeter++;
 		}
