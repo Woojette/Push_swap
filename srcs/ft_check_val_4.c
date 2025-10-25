@@ -16,12 +16,11 @@ int	ft_check_val_4_pb_0(t_pile *lst)
 	n3 = lst->content;
 	lst = lst->next;
 	n4 = lst->content;
-	// ft_printf("n : %d %d %d %d\n", n1, n2, n3, n4);
-	if (n1 > n2  &&  n1 < n3  &&  n3 < n4) // 2134
+	if (n1 > n2  &&  n1 < n3  &&  n3 < n4)
 		return (1);
-	if (n1 < n2  &&  n2 < n3  &&  n1 > n4) // 2341
+	if (n1 < n2  &&  n2 < n3  &&  n1 > n4)
 		return (1);
-	if (n2 < n3  &&  n3 < n4  &&  n4 < n1) // 4123
+	if (n2 < n3  &&  n3 < n4  &&  n4 < n1)
 		return (1);
 	return (0);
 }

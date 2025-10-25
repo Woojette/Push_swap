@@ -25,17 +25,12 @@ int	ft_check_max_index(t_pile *lst)
 
 	if (!lst)
 		return (0);
-	// ft_print_list(lst);
 	max = lst->next->index;
 	while (lst)
 	{
 		n1 = lst->index;
-		// ft_printf("n1 : %d, max : %d\n", n1, max);
 		if (n1 > max)
-		{
-			// ft_printf("CHnge n1 : %d, max : %d\n", n1, max);
 			max = n1;
-		}
 		lst = lst->next;
 	}
 	return (max);

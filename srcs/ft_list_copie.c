@@ -50,18 +50,3 @@ void	ft_bubble_sort_index(t_pile **lst)
 	ft_bubble_sort(lst);
 	ft_index(lst);
 }
-
-void	ft_swap_valeurs(t_pile *lst_a, t_pile *lst_b)
-{
-	int	temp_content_a;
-	int	temp_index_a;
-
-	if (!lst_a || !lst_b)
-		return ;
-	temp_content_a = lst_a->content;
-	temp_index_a = lst_a->index;
-	lst_a->content = lst_b->content;
-	lst_a->index = lst_b->index;
-	lst_b->content = temp_content_a;
-	lst_b->index = temp_index_a;
-}

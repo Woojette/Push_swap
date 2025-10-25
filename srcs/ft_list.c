@@ -49,8 +49,6 @@ t_pile	*ft_lstmap(t_pile *lst, int (*f)(t_pile *lst), void (*del)(void *))
 	while (lst)
 	{
 		content_new = f(lst);
-		// if (!content_new)
-		// 	return (ft_lst_clear(&lst_new), NULL);
 		lst_ajoute = ft_lstnew(content_new);
 		if (!lst_ajoute)
 			return (ft_lst_clear(&lst_new), NULL);
