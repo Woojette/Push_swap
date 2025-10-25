@@ -9,6 +9,20 @@ void	ft_free(char **resultat, int j)
 	}
 	free(resultat);
 }
+void	ft_free_pl(char **resultat)
+{
+	int	len;
+	int i;
+
+	i = 0;
+	len = ft_tablen(resultat);
+	while (i < len)
+	{
+		free(resultat[i]);
+		i++;
+	}
+	free(resultat);
+}
 
 void	ft_lst_clear(t_pile **lst)
 {

@@ -51,13 +51,23 @@ int	ft_dup_check(char *av, t_pile *lst)
 	return (0);
 }
 
+int	ft_tablen(char **tab)
+{
+	int i;
+
+	i = 0;
+	while (tab[i])
+		i++;
+	return (i);
+}
+
 int	ft_check_av(char *av, t_pile *lst)
 {
 	if (ft_int_check(av) == 1)
-		return (ft_printf("Error\nInt\n"), 1);
+		return (write(2, "Error\n", 6), 1);
 	if (ft_limit_check(av) == 1)
-		return (ft_printf("Error\nInt max/min\n"), 1);
+		return (write(2, "Error\n", 6), 1);
 	if (ft_dup_check(av, lst) == 1)
-		return (ft_printf("Error\nDoublons\n"), 1);
+		return (write(2, "Error\n", 6), 1);
 	return (0);
 }
