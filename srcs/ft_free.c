@@ -14,24 +14,34 @@
 
 void	ft_free(char **resultat, int j)
 {
+	if (!resultat)
+		return ;
 	while (j > 0)
 	{
 		j--;
-		free(resultat[j]);
+		if (resultat[j])
+		{
+			free(resultat[j]);
+			resultat[j] = NULL;
+		}
 	}
 	free(resultat);
 }
 
 void	ft_free_pl(char **resultat)
 {
-	int	len;
 	int	i;
 
+	if (!resultat)
+		return ;
 	i = 0;
-	len = ft_tablen(resultat);
-	while (i < len)
+	while (resultat[i])
 	{
-		free(resultat[i]);
+		if (resultat[i])
+		{
+			free(resultat[i]);
+			resultat[i] = NULL;
+		}
 		i++;
 	}
 	free(resultat);
@@ -41,7 +51,7 @@ void	ft_lst_clear(t_pile **lst)
 {
 	t_pile	*temp;
 
-	if (!(*lst))
+	if (!lst || !*lst)
 		return ;
 	while ((*lst))
 	{
@@ -49,13 +59,20 @@ void	ft_lst_clear(t_pile **lst)
 		(*lst) = (*lst)->next;
 		free(temp);
 	}
+	*lst = NULL;
 }
 
 void	ft_free_list(t_pile **lst_a, t_pile **lst_b, t_ps **ps, int ac)
 {
-	ft_lst_clear(lst_a);
-	ft_lst_clear(lst_b);
-	if (ac == 2)
-		ft_free((*ps)->av_splite, (*ps)->arg);
-	free(*ps);
+	if (lst_a)
+		ft_lst_clear(lst_a);
+	if (lst_b)
+		ft_lst_clear(lst_b);
+	if (ps && *ps)
+	{
+		if (ac == 2 && (*ps)->av_splite)
+			ft_free_pl((*ps)->av_splite);
+		free(*ps);
+		*ps = NULL;
+	}
 }

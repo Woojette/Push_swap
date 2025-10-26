@@ -23,20 +23,16 @@ int	main(int ac, char **av)
 	if (ac < 2)
 		return (1);
 	ps = malloc(sizeof(t_ps));
-	ft_init(&stack_a, &stack_b, &list_new, &copie_a);
 	if (!ps)
 		return (1);
-	ps->error = 0;
-	ps->arg = 1;
+	ft_init(&stack_a, &stack_b, &list_new, &copie_a);
+	ft_init_ps(&ps);
 	if (ac == 2)
-		return (ft_ac_2(&stack_a, &list_new, &ps, av),
-			ft_check_sorted_1234(&stack_a, &stack_b, &ps, ac),
-			ft_index_radix(&stack_a, &stack_b, &copie_a),
-			ft_lst_clear(&copie_a),
-			ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
+		ft_ac_2(&stack_a, &list_new, &ps, av);
 	while (ps->arg < ac)
 		ft_ac_pl(&stack_a, &list_new, &ps, av);
 	return (ft_check_sorted_1234(&stack_a, &stack_b, &ps, ac),
-		ft_index_radix(&stack_a, &stack_b, &copie_a), ft_lst_clear(&copie_a),
+		ft_index_radix(&stack_a, &stack_b, &copie_a),
+		ft_lst_clear(&copie_a),
 		ft_free_list(&stack_a, &stack_b, &ps, ac), 0);
 }

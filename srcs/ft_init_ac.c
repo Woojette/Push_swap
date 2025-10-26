@@ -20,6 +20,12 @@ void	ft_init(t_pile **l_a, t_pile **l_b, t_pile **l_new, t_pile **cp_a)
 	(*cp_a) = NULL;
 }
 
+void	ft_init_ps(t_ps **ps)
+{
+	(*ps)->error = 0;
+	(*ps)->arg = 1;
+}
+
 int	ft_ac_2(t_pile **lst_a, t_pile **l_new, t_ps **ps, char **av)
 {
 	(*ps)->arg = 0;
@@ -27,8 +33,14 @@ int	ft_ac_2(t_pile **lst_a, t_pile **l_new, t_ps **ps, char **av)
 	while ((*ps)->av_splite[(*ps)->arg])
 	{
 		if (ft_check_av((*ps)->av_splite[(*ps)->arg], (*lst_a)) == 1)
-			return (ft_lst_clear(lst_a),
-				ft_free_pl((*ps)->av_splite), free((*ps)), 1);
+		{
+			ft_lst_clear(lst_a);
+			ft_free_pl((*ps)->av_splite);
+			(*ps)->av_splite = NULL;
+			free((*ps));
+			(*ps) = NULL;
+			exit (1);
+		}
 		(*l_new) = ft_lstnew(ft_atoi((*ps)->av_splite[(*ps)->arg],
 					&((*ps)->error)));
 		ft_lstadd_back(lst_a, (*l_new));
@@ -40,7 +52,12 @@ int	ft_ac_2(t_pile **lst_a, t_pile **l_new, t_ps **ps, char **av)
 int	ft_ac_pl(t_pile **lst_a, t_pile **lst_new, t_ps **ps, char **av)
 {
 	if (ft_check_av(av[(*ps)->arg], (*lst_a)) == 1)
-		return (ft_lst_clear(lst_a), free((*ps)), 1);
+	{
+		ft_lst_clear(lst_a);
+		free((*ps));
+		(*ps) = NULL;
+		exit (1);
+	}
 	(*lst_new) = ft_lstnew(ft_atoi(av[(*ps)->arg], &((*ps)->error)));
 	ft_lstadd_back(lst_a, (*lst_new));
 	(*ps)->arg++;
