@@ -69,3 +69,18 @@ void	ft_radix(t_pile **lst_a, t_pile **lst_b)
 		repeter = 0;
 	}
 }
+
+void	ft_check_radix_ordre(t_pile *lst_a)
+{
+	while (lst_a)
+	{
+		if (lst_a)
+			return ;
+		if ((lst_a->next->index) != ((lst_a->index) + 1))
+		{
+			ft_printf("Error ordre\n");
+			return ;
+		}
+		lst_a = lst_a->next;
+	}
+}

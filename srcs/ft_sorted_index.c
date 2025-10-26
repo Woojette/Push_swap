@@ -36,4 +36,5 @@ void	ft_index_radix(t_pile **lst_a, t_pile **lst_b, t_pile **copie_a)
 	ft_index(copie_a);
 	ft_index_copie(lst_a, copie_a);
 	ft_radix(lst_a, lst_b);
+	ft_check_radix_ordre((*lst_a));
 }

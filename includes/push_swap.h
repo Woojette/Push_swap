@@ -95,5 +95,6 @@ void	ft_init_ps(t_ps **ps);
 int		ft_check_sorted_1234(t_pile **lst_a, t_pile **lst_b, t_ps **ps, int ac);
 int		ft_ac_2(t_pile **lst_a, t_pile **l_new, t_ps **ps, char **av);
 int		ft_ac_pl(t_pile **lst_a, t_pile **lst_new, t_ps **ps, char **av);
+void	ft_check_radix_ordre(t_pile *lst_a);
 
 #endif
