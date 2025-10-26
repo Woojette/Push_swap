@@ -66,6 +66,23 @@ void	ft_check_val_a_3(t_pile **lst)
 	ft_tri_a_3(n1, n2, n3, lst);
 }
 
+// void	ft_check_val_a_123(t_pile **lst)
+// {
+// 	t_pile	*temp_lst;
+
+// 	if (!lst || !(*lst))
+// 		return ;
+// 	temp_lst = (*lst);
+// 	if (temp_lst->next == NULL)
+// 		return ;
+// 	temp_lst = temp_lst->next;
+// 	if (temp_lst->next == NULL)
+// 		ft_check_val_a_2(lst);
+// 	temp_lst = temp_lst->next;
+// 	if (temp_lst->next == NULL && temp_lst)
+// 		ft_check_val_a_3(lst);
+// }
+
 void	ft_check_val_a_123(t_pile **lst)
 {
 	t_pile	*temp_lst;
@@ -75,10 +92,14 @@ void	ft_check_val_a_123(t_pile **lst)
 	temp_lst = (*lst);
 	if (temp_lst->next == NULL)
 		return ;
-	temp_lst = temp_lst->next;
-	if (temp_lst->next == NULL)
+	if (temp_lst->next->next == NULL)
+	{
 		ft_check_val_a_2(lst);
-	temp_lst = temp_lst->next;
-	if (temp_lst->next == NULL && temp_lst)
+		return ;
+	}
+	if (temp_lst->next->next->next == NULL)
+	{
 		ft_check_val_a_3(lst);
+		return ; 
+	}
 }

@@ -20,7 +20,7 @@ int	main(int ac, char **av)
 	t_pile	*list_new;
 	t_pile	*copie_a;
 
-	if (ac < 2)
+	if (ac < 2 || !av[0])
 		return (1);
 	ps = malloc(sizeof(t_ps));
 	if (!ps)
@@ -29,8 +29,11 @@ int	main(int ac, char **av)
 	ft_init_ps(&ps);
 	if (ac == 2)
 		ft_ac_2(&stack_a, &list_new, &ps, av);
-	while (ps->arg < ac)
-		ft_ac_pl(&stack_a, &list_new, &ps, av);
+	else
+	{
+		while (ps->arg < ac)
+			ft_ac_pl(&stack_a, &list_new, &ps, av);
+	}
 	return (ft_check_sorted_1234(&stack_a, &stack_b, &ps, ac),
 		ft_index_radix(&stack_a, &stack_b, &copie_a),
 		ft_lst_clear(&copie_a),

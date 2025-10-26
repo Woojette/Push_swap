@@ -32,7 +32,7 @@ void	ft_free_pl(char **resultat)
 {
 	int	i;
 
-	if (!resultat)
+	if (!resultat || !*resultat)
 		return ;
 	i = 0;
 	while (resultat[i])

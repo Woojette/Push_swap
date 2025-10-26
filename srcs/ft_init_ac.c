@@ -46,6 +46,8 @@ int	ft_ac_2(t_pile **lst_a, t_pile **l_new, t_ps **ps, char **av)
 		ft_lstadd_back(lst_a, (*l_new));
 		(*ps)->arg++;
 	}
+	ft_free_pl((*ps)->av_splite);
+	(*ps)->av_splite = NULL;
 	return (0);
 }
 
