@@ -90,6 +90,9 @@ void	ft_radix(t_pile **lst_a, t_pile **lst_b);
 int		ft_check_max_index(t_pile *lst);
 int		ft_compter_bits_max(t_pile *lst);
 void	ft_check_position_bits(t_pile **lst_a, t_pile **lst_b, int p_bits);
+void	ft_init(t_pile **l_a, t_pile **l_b, t_pile **l_new, t_pile **cp_a);
 int		ft_check_sorted_1234(t_pile **lst_a, t_pile **lst_b, t_ps **ps, int ac);
+int		ft_ac_2(t_pile **lst_a, t_pile **l_new, t_ps **ps, char **av);
+int		ft_ac_pl(t_pile **lst_a, t_pile **lst_new, t_ps **ps, char **av);
 
 #endif

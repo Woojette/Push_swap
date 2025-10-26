@@ -12,28 +12,37 @@
 
 #include "push_swap.h"
 
-int	ft_check_sorted_1234(t_pile **lst_a, t_pile **lst_b, t_ps **ps, int ac)
+void	ft_init(t_pile **l_a, t_pile **l_b, t_pile **l_new, t_pile **cp_a)
 {
-	if (ft_if_sorted((*lst_a), (*lst_b)))
-		return (ft_free_list(lst_a, lst_b, ps, ac), 0);
-	if (ft_compter_val_a((*lst_a), (*lst_b)) <= 3)
+	(*l_a) = NULL;
+	(*l_b) = NULL;
+	(*l_new) = NULL;
+	(*cp_a) = NULL;
+}
+
+int	ft_ac_2(t_pile **lst_a, t_pile **l_new, t_ps **ps, char **av)
+{
+	(*ps)->arg = 0;
+	(*ps)->av_splite = ft_split(av[1], ' ');
+	while ((*ps)->av_splite[(*ps)->arg])
 	{
-		ft_check_val_a_123(lst_a);
-		return (ft_free_list(lst_a, lst_b, ps, ac), 0);
-	}
-	if (ft_compter_val_a((*lst_a), (*lst_b)) == 4)
-	{
-		ft_check_val_4(lst_a, lst_b);
-		return (ft_free_list(lst_a, lst_b, ps, ac), 0);
+		if (ft_check_av((*ps)->av_splite[(*ps)->arg], (*lst_a)) == 1)
+			return (ft_lst_clear(lst_a),
+				ft_free_pl((*ps)->av_splite), free((*ps)), 1);
+		(*l_new) = ft_lstnew(ft_atoi((*ps)->av_splite[(*ps)->arg],
+					&((*ps)->error)));
+		ft_lstadd_back(lst_a, (*l_new));
+		(*ps)->arg++;
 	}
 	return (0);
 }
 
-void	ft_index_radix(t_pile **lst_a, t_pile **lst_b, t_pile **copie_a)
+int	ft_ac_pl(t_pile **lst_a, t_pile **lst_new, t_ps **ps, char **av)
 {
-	(*copie_a) = ft_lstmap((*lst_a), ft_list_contenu_copie, free);
-	ft_bubble_sort(copie_a);
-	ft_index(copie_a);
-	ft_index_copie(lst_a, copie_a);
-	ft_radix(lst_a, lst_b);
+	if (ft_check_av(av[(*ps)->arg], (*lst_a)) == 1)
+		return (ft_lst_clear(lst_a), free((*ps)), 1);
+	(*lst_new) = ft_lstnew(ft_atoi(av[(*ps)->arg], &((*ps)->error)));
+	ft_lstadd_back(lst_a, (*lst_new));
+	(*ps)->arg++;
+	return (0);
 }

@@ -42,7 +42,8 @@ void	ft_rotate_b(t_pile **lst)
 
 void	ft_rotate_rr(t_pile **lst_a, t_pile **lst_b)
 {
-	if ((!lst_a || !(*lst_a) || !(*lst_a)->next) && (!lst_b || !(*lst_b) || !(*lst_b)))
+	if ((!lst_a || !(*lst_a) || !(*lst_a)->next)
+		&& (!lst_b || !(*lst_b) || !(*lst_b)))
 		return ;
 	else if ((!(lst_a) || !(*lst_a) || !(*lst_a)->next) && (*lst_b))
 		ft_rotate(lst_b);

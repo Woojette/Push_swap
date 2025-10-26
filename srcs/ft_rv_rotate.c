@@ -28,7 +28,7 @@ void	ft_rv_rotate(t_pile **lst)
 		if (temp->next == temp_fin)
 		{
 			temp->next = NULL;
-			break;
+			break ;
 		}
 		temp = temp->next;
 	}
@@ -49,7 +49,8 @@ void	ft_rv_rotate_b(t_pile **lst)
 
 void	ft_rv_rotate_rrr(t_pile **lst_a, t_pile **lst_b)
 {
-	if ((!lst_a || !(*lst_a) || !(*lst_a)->next) && (!lst_b || !(*lst_b) || !(*lst_b)))
+	if ((!lst_a || !(*lst_a) || !(*lst_a)->next)
+		&& (!lst_b || !(*lst_b) || !(*lst_b)))
 		return ;
 	else if ((!(lst_a) || !(*lst_a) || !(*lst_a)->next) && (*lst_b))
 		ft_rv_rotate(lst_b);

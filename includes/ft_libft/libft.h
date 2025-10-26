@@ -19,7 +19,6 @@
 # include <stdlib.h>
 # include <ctype.h>
 # include <strings.h>
-// # include <bsd/string.h>
 # include <limits.h>
 
 size_t	ft_strlen(const char *str);
@@ -48,7 +47,7 @@ char	*ft_strrchr(const char *str, int val);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-long		ft_atoi(const char *str, int *error);
+long	ft_atoi(const char *str, int *error);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_itoa(int n);

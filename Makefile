@@ -9,7 +9,8 @@ SRC_DIR = srcs
 OBJ_DIR     = objs
 
 SRC =	$(SRC_DIR)/push_swap.c \
-		$(SRC_DIR)/ft_dans_main.c \
+		$(SRC_DIR)/ft_init_ac.c \
+		$(SRC_DIR)/ft_sorted_index.c \
 		$(SRC_DIR)/ft_list.c \
 		$(SRC_DIR)/ft_check_av.c \
 		$(SRC_DIR)/ft_check_tri.c \
