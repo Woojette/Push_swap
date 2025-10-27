@@ -20,7 +20,7 @@ int	main(int ac, char **av)
 	t_pile	*list_new;
 	t_pile	*copie_a;
 
-	if (ac < 2 || !av[0] || !av[1] || av[1][0] == '\0')
+	if (ac < 2 || !av[1] || av[1][0] == '\0')
 		return (1);
 	ps = malloc(sizeof(t_ps));
 	if (!ps)
